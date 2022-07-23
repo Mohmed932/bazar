@@ -1,0 +1,282 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  box-sizing: border-box;
+  background-color: #f6f9fc;
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+  color:#333;
+}
+.btn{
+  background-color: #D46A6A;
+  color: #ffff;
+  padding: 10px;
+  font-size:20px;
+  border: none;
+  cursor: pointer;
+  transition: .5s;
+}
+.btn:hover{
+  background-color: #ffff;
+  color: #D46A6A;
+  border: 1px solid #D46A6A;
+}
+.Apple{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 16vh;
+  left: 25vw;
+}
+.appleimg{
+  width: 200px;
+  height: 200px;
+}
+.minApple{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 30px;
+  border-radius: 20px;
+  background-color: #ffff;
+  width: 22vw;
+  padding: 40px 20px;
+}
+.minApple:hover{
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+}
+.Pricing{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 90%;
+}
+.Pricing h4{
+  color: #D46A6A;
+}
+.Pricing button{
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #D46A6A;
+  font-size: 30px;
+  background-color: transparent;
+  border: 1px solid #D46A6A;
+}
+.product_title{
+  padding: 10px 10px;
+  margin-top: 10px;
+}
+.discount h3{
+   text-decoration:line-through;
+   color: #9999;
+}
+.product_title{
+  line-height: 1.5;
+}
+.DetalesDell{
+  position: absolute;
+  top:21vh;
+  left:30vw;
+  width: 60vw;
+  height: 80vh;
+  background-color: #ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+  font-size: large;
+}
+.photoimg{
+  width:20vw;
+  margin-left:80px;
+  margin-top: -190px;
+}
+.desc{
+  margin: 19px;
+  z-index: 987;
+  width: 30vw;
+  margin-left: 27px;
+}
+.desc h3{
+  margin: 20px 0;
+}
+.desc p{
+  text-transform: uppercase;
+  width: 100%;
+  margin: 30px 0;
+  text-align: justify;
+  line-height: 1.5;
+}
+.detalesdiscount{
+  display:flex;
+}
+.detalesdiscount h4{
+  padding: 20px;
+  color: #D46A6A;
+  font-size: 20px;
+}
+.detalesdiscount h3{
+  text-decoration: line-through;
+  padding: 20px;
+}
+.Datalesprodects{
+  position: absolute;
+  top: 22vh;
+  left: 30vw;
+  width: 67vw;
+}
+.Datalesprodect{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+  background-color: #ffff;
+  height: 35vh;
+  margin-bottom: 100px;
+  margin-right: 40px;
+  width: 80%;
+}
+.Datalesprodectone,.deleteprodectone{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:0 20px;
+}
+.Datalesprodectright{
+  display: flex;
+  justify-content: space-around;
+}
+.image{
+  width: 11vw;
+  padding: 20px;
+}
+.Datalesprodecttwo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -250px 0;
+  background-color: #D46A6A;
+}
+.Youhavenotaddedanyproducts{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width:1150px) {
+  .DetalesDell{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .photoimg{
+    width: 25vw;
+    margin-top: 25px;
+  }
+  .desc{
+    order: 1;
+    width: 55vw;
+  }
+}
+@media (max-width:1027px) {
+  .photoimg{
+    margin-top: 100px;
+  }
+}
+@media (max-width:900px) {
+  .Apple{
+    left: 15vw;
+  }
+  .minApple{
+    width: 29vw;
+  }
+  .photoimg{
+   width: 45vw;
+   margin-right: 10vw;
+  }
+  .Datalesprodect{
+    width: 120%;
+  }
+  .Youhavenotaddedanyproducts{
+    margin-right: 20vw;
+    width: 100%;
+  }
+}
+@media (max-width:802px) {
+  .Apple{
+    left: 10vw;
+  }
+  .minApple{
+    width: 49vw;
+  }
+  .image{
+    width: 15vw;
+  }
+}
+@media (max-width:600px) {
+  .DetalesDell{
+    position: absolute;
+    top:21vh;
+    left:12vw;
+    width: 80vw;
+    height: 110vh;
+  }
+  .photoimg{
+    width: 50vw;
+    margin-right:14vw;
+  }
+  .desc{
+    order: 1;
+    width: 55vw;
+  }
+  .minApple{
+    width: 150%;
+  }
+  .Datalesprodect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    margin-right:15px;
+  }
+  .Datalesprodectone,.Datalesprodectright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .Datalesprodectleft{
+    position: absolute;
+    top: 20px;
+  }
+  .image{
+    width: 40vw;
+  }
+  .Youhavenotaddedanyproducts{
+    margin-right: 25vw;
+  }
+}
+@media (max-width:375px) {
+  .DetalesDell{
+    height: 150vh;
+  }
+  .photoimg{
+    margin-top:15vh;
+  }
+   .Youhavenotaddedanyproducts{
+    width: 140%;
+    margin-right: 5vw;
+  }
+  .minApple{
+    width: 100%;
+  }
+}

@@ -1,0 +1,61 @@
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+}
+.Searching{
+    border: 1px solid #D46A6A;
+    padding:3px 10px;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Searching input {
+    border: none;
+    width: 90%;
+    font-size: 20px;
+    padding: 10px;
+    outline: none;
+}
+.Cart{
+    display: flex;
+}
+.Cart i{
+    padding: 13px;
+    margin-left: 20px;
+    background-color:#f6f9fc;
+    color: #D46A6A;
+    cursor: pointer;
+    border-radius: 20px;
+    z-index: 23;
+}
+.tocart{
+    position: relative;
+    z-index: 23;
+}
+.count{
+    position: absolute;
+    top: -17px;
+    left: 55px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D46A6A;
+    color:#ffff;
+    z-index: 27;
+}
+@media (max-width:650px) {
+    .logo{
+        display: none;
+    }
+    .Searching{
+        width: 70vw;
+    }
+}
