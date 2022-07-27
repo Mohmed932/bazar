@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
 import {Link} from 'react-router-dom'
 
-const Header = ({setsearch,conut}) => {
+const Header = ({setsearch,conut,Show,setShow}) => {
+
+  const handelShow = () => {
+    setShow(!Show)
+  }
 
   return (
     <div className='Header'>
@@ -12,12 +16,16 @@ const Header = ({setsearch,conut}) => {
         <i className="fa-solid fa-magnifying-glass"></i>
       </div>
       <div className='Cart'>
-        <i class="fa-solid fa-user"></i>
         <div className='Counter'>
-          <Link to='/Cart' className='tocart'>
+           <Link to='/Cart' className='tocart'>
              <i class="fa-solid fa-bag-shopping"></i>
              {conut>0?<h4 className='count'>{conut}</h4>:''}
-         </Link>
+           </Link>
+        </div>
+        <div className='mobile' onClick={handelShow}>
+            <span className={Show?'mobile-res one':'mobile-res'}></span>
+            <span className={Show?'mobile-res two':'mobile-res'}></span>
+            <span className={Show?'mobile-res three':'mobile-res'}></span>
         </div>
       </div>
     </div>

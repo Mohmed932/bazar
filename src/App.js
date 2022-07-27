@@ -23,11 +23,12 @@ import Footer from './components/Footer/Footer';
 const App = () => {
   const [search,setsearch] = useState('')
   const [conut,setconut] = useState(0)
+  const [Show,setShow] = useState(false)
   return (
       <div className='App'>
          <Router>
-           <Header setsearch={setsearch}  conut={conut}/>
-           <Brands/> 
+           <Header setsearch={setsearch}  conut={conut} Show={Show} setShow={setShow}/>
+           <Brands Show={Show} setShow={setShow}/> 
            <Routes>
              <Route path='*' element={<NotFouand/>}/>
              <Route path='/' element={<Apple  search={search} setconut={setconut} conut={conut}/>}/>
