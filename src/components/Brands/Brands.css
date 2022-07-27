@@ -31,11 +31,11 @@
     .Brands{
         position: fixed;
         right:-2000px;
-        top: 60px;
+        top: 40px;
         box-shadow: none;
         width: 100%;
         height: 100%;
-        transition: .8s;
+        transition: .5s;
     }
      .setBrands{
         right:-80px;

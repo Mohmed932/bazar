@@ -5,6 +5,9 @@
     background-color: #fff;
     padding: 30px;
     box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+    position: fixed;
+    width: 100%;
+    z-index: 09809;
 }
 .Searching{
     border: 1px solid #D46A6A;
