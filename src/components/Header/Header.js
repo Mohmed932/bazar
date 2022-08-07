@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import './Header.css'
 import {Link} from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import {createSearch} from '../../redux/reducers'
 
-const Header = ({setsearch,conut,Show,setShow}) => {
-
+const Header = ({Show,setShow}) => {
+  const {mount}  = useSelector(state=>state.getprodect)
+  const dispatch = useDispatch()
   const handelShow = () => {
     setShow(!Show)
   }
@@ -12,14 +15,14 @@ const Header = ({setsearch,conut,Show,setShow}) => {
     <div className='Header'>
       <img className='logo' src='https://bazar-react.vercel.app/assets/images/logo2.svg' alt='phone'/>
       <div className='Searching'>
-        <input type='text' placeholder='Searching for...' onChange={(e)=>setsearch(e.target.value)}/>
+        <input type='text' placeholder='Searching for...' onChange={(e)=>dispatch(createSearch(e.target.value))}/>
         <i className="fa-solid fa-magnifying-glass"></i>
       </div>
       <div className='Cart'>
         <div className='Counter'>
            <Link to='/Cart' className='tocart'>
              <i class="fa-solid fa-bag-shopping"></i>
-             {conut>0?<h4 className='count'>{conut}</h4>:''}
+             {mount>0?<h4 className='count'>{mount}</h4>:''}
            </Link>
         </div>
         <div className='mobile' onClick={handelShow}>

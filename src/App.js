@@ -21,29 +21,27 @@ import Footer from './components/Footer/Footer';
 
 
 const App = () => {
-  const [search,setsearch] = useState('')
-  const [conut,setconut] = useState(0)
   const [Show,setShow] = useState(false)
   return (
       <div className='App'>
          <Router>
-           <Header setsearch={setsearch}  conut={conut} Show={Show} setShow={setShow}/>
+           <Header  Show={Show} setShow={setShow}/>
            <Brands Show={Show} setShow={setShow}/> 
            <Routes>
              <Route path='*' element={<NotFouand/>}/>
-             <Route path='/' element={<Apple  search={search} setconut={setconut} conut={conut}/>}/>
-             <Route path='/Acer' element={<Acer search={search} setconut={setconut} conut={conut}/>}/>
-             <Route path='/Asus' element={<Asus search={search} setconut={setconut} conut={conut}/>}/>
-             <Route path='/Dell' element={<Dell search={search} setconut={setconut} conut={conut}/>}/>
-             <Route path='/Sony' element={<Sony search={search} setconut={setconut} conut={conut}/>}/>
-             <Route path='/Xiaomi' element={<Xiaomi search={search} setconut={setconut} conut={conut}/>}/>
-             <Route path='/prodect/:id' element={<DetalesDell setconut={setconut} conut={conut}/>}/>
-             <Route path='/DetalesApple/:id' element={<DetalesApple setconut={setconut} conut={conut}/>}/>
-             <Route path='/DetalesAcer/:id' element={<DetalesAcer setconut={setconut} conut={conut}/>}/>
-             <Route path='/DetalesAsus/:id' element={<DetalesAsus setconut={setconut} conut={conut}/>}/>
-             <Route path='/DetalesSony/:id' element={<DetalesSony setconut={setconut} conut={conut}/>}/>
-             <Route path='/DetalesXiaomi/:id' element={<DetalesXiaomi setconut={setconut} conut={conut}/>}/>
-             <Route path='Cart' element={<Datalesprodects setconut={setconut} conut={conut}/>}/>
+             <Route path='/' element={<Apple />}/>
+             <Route path='/Acer' element={<Acer/>}/>
+             <Route path='/Asus' element={<Asus/>}/>
+             <Route path='/Dell' element={<Dell/>}/>
+             <Route path='/Sony' element={<Sony/>}/>
+             <Route path='/Xiaomi' element={<Xiaomi/>}/>
+             <Route path='/prodect/:id' element={<DetalesDell/>}/>
+             <Route path='/DetalesApple/:id' element={<DetalesApple/>}/>
+             <Route path='/DetalesAcer/:id' element={<DetalesAcer/>}/>
+             <Route path='/DetalesAsus/:id' element={<DetalesAsus/>}/>
+             <Route path='/DetalesSony/:id' element={<DetalesSony/>}/>
+             <Route path='/DetalesXiaomi/:id' element={<DetalesXiaomi/>}/>
+             <Route path='Cart' element={<Datalesprodects/>}/>
            </Routes>
            <Footer/>
          </Router> 

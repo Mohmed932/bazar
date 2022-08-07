@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import {useSelector,useDispatch} from 'react-redux'
-import { Deleteprodect } from "../redux/reducers";
+import { Deleteprodect,Addconter } from "../redux/reducers";
 
-const Datalesprodects = ({setconut,conut}) => {
+const Datalesprodects = () => {
   const [prodect,setprodect] = useState(0)
+  const conut  = 0
   const add = () => {
     if(prodect){
       return setprodect(prodect-1)
@@ -37,7 +38,7 @@ const Datalesprodects = ({setconut,conut}) => {
           </div>
           <div className='Datalesprodecttwo'>
               <div className='deleteprodectone'>
-                  <button className='btn' onClick={()=>setconut(conut-1)||dispatch(Deleteprodect(item.id))}>Delete</button>
+                  <button className='btn' onClick={()=>dispatch(Addconter(-1))&&dispatch(Deleteprodect(item.id))}>Delete</button>
               </div>
               <div className='deleteprodectone'>
                   <button className='btn' onClick={()=>setprodect(prodect+1)}>+</button>
